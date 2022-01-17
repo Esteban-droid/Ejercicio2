@@ -5,6 +5,19 @@ public class Project {
 
     private String descripcion;
     
+    //Sobrecarga de metodo
+    public String elevatorPitch(){
+
+    	return nombre + ": " + descripcion;
+    	
+    }
+    
+    public String elevatorPitch(String nombre){
+
+    	return nombre;
+    	
+    }
+    
     public String elevatorPitch(String nombre, String descripcion){
 
     	return nombre + ": " + descripcion;
@@ -43,9 +56,6 @@ public class Project {
     
     public Project() {
     	
-    	nombre = "Proyecto";
-    	descripcion = "Descripcion de proyecto";
-
     }
     
     

@@ -2,19 +2,19 @@ package Zoologico1;
 
 public class Mammal {
 
-	public int energyLevel = 100;
-	public int energyLevel2 = 300;
+	private int energyLevel;
 	
-
 	public void desiplayEnergy() {
 		
 		System.out.println("Nivel de energía: " + energyLevel);
 		System.out.println("------------------------------------------");
 	}
-	
-	public void desiplayEnergy2() {
-		
-		System.out.println("Nivel de energía: " + energyLevel2);
-		System.out.println("------------------------------------------");
+
+	public int getEnergyLevel() {
+		return energyLevel;
+	}
+
+	public void setEnergyLevel(int energyLevel) {
+		this.energyLevel = energyLevel;
 	}
 }

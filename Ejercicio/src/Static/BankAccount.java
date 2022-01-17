@@ -5,8 +5,8 @@ import java.util.Random;
 public class BankAccount {
 
 	private String nCuenta;
-	private static double sCorriente=0;
-	private static double sAhorro=0;
+	private double sCorriente=0;
+	private double sAhorro=0;
 	
 	private static int numberOfAccounts = 0;
 	
@@ -21,40 +21,34 @@ public class BankAccount {
 	
     private String randomNumber() {
     	Random dato = new Random();
-    	//String number="";
-    	//for(int i = 1; i<=10; i++) {
-    	//	int numero = dato.nextInt(10);
-    	//	number=number+numero;
-    	//}
-    	//return number;
-    	
     	Integer number = dato.nextInt(1000000000)+1000000000;
     	return number.toString();
     	
     }
     
-    public static void depositar(char tipoCta, double valor) {
+    public void depositar(char tipoCta, double valor) {
     	if (tipoCta == 'C' || tipoCta =='c') {
-    		sCorriente = sCorriente + valor;
+    		sCorriente = getsCorriente() + valor;
     	} else if(tipoCta == 'A' || tipoCta =='a') {
-    		sAhorro = sAhorro + valor;
+    		sAhorro = getsAhorro() + valor;
     	}else {
     		System.out.println("Error al ingresar tipo de cuenta");
     	}
     }
     
-    public static void retirar(char tipoCta, double valor) {
-    	if (tipoCta == 'C' || tipoCta =='c') {
-    		sCorriente = sCorriente - valor;
-    	}else if(tipoCta == 'A' || tipoCta =='a') {
-    		sAhorro = sAhorro - valor;
+    public void retirar(char tipoCta, double valor) {
+    	if (tipoCta == 'C' || tipoCta =='c' && sAhorro>0) {
+    		sCorriente = getsCorriente() - valor;
+    	}else if(tipoCta == 'A' || tipoCta =='a' && sAhorro>0) {
+    		sAhorro = getsAhorro() - valor;
+    	}else {
+    		System.out.println("Error al ingresar tipo de cuenta");
     	}
     }
     
-    public static String verTotal() {
+    public String verTotal() {
     	double corriente = getsCorriente();
     	double ahorro = getsAhorro();
-    	numberOfAccounts++;
         return "Total en corriente: " + corriente + "." + " Total en ahorro: " + ahorro + "." + "\nHay: " + numberOfAccounts + " cuentas creadas.";
         
 
@@ -71,7 +65,7 @@ public class BankAccount {
 			this.nCuenta = nCuenta;
 		}
 
-		public static double getsCorriente() { //getter saldo cuenta corriente
+		public double getsCorriente() { //getter saldo cuenta corriente
 			return sCorriente;
 		}
 
@@ -79,7 +73,7 @@ public class BankAccount {
 			this.sCorriente = sCorriente;
 		}
 
-		public static double getsAhorro() { //getter saldo cuenta ahorro
+		public double getsAhorro() { //getter saldo cuenta ahorro
 			return sAhorro;
 		}
 

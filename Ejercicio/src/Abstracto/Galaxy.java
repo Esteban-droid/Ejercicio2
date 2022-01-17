@@ -6,12 +6,12 @@ public class Galaxy extends Phone implements Ringable {
         super(versionNumber, batteryPercentage, carrier, ringTone);
     }
 
-    public void ring() {
-    	System.out.println("anillo");
+    public String ring() {
+		return "Rington";
     }
 
-    public void unlock() {
-    	System.out.println("bloqueado");
+    public String unlock() {
+    	return "Desbloqueado";
     }
 
     public void displayInfo() {

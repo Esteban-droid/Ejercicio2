@@ -6,12 +6,12 @@ public class IPhone extends Phone implements Ringable {
         super(versionNumber, batteryPercentage, carrier, ringTone);
     }
 
-    public void ring() {
-		System.out.println("anillo");
+    public String ring() {
+		return "Rington";
     }
 
-    public void unlock() {
-    	System.out.println("desbloqueado");
+    public String unlock() {
+    	return "Desbloqueado";
     }
 
     public void displayInfo() {

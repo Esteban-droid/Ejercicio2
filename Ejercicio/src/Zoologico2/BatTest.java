@@ -5,20 +5,21 @@ public class BatTest {
 	public static void main(String[] args) {
 
 		Bat bat = new Bat();
+		bat.setEnergyLevel(300);
 		bat.attackTown();
-		bat.desiplayEnergy2();
+		bat.desiplayEnergy();
 		bat.attackTown();
-		bat.desiplayEnergy2();
+		bat.desiplayEnergy();
 		bat.attackTown();
-		bat.desiplayEnergy2();
+		bat.desiplayEnergy();
 		bat.eatHumans();
-		bat.desiplayEnergy2();
+		bat.desiplayEnergy();
 		bat.eatHumans();
-		bat.desiplayEnergy2();
+		bat.desiplayEnergy();
 		bat.fly();
-		bat.desiplayEnergy2();
+		bat.desiplayEnergy();
 		bat.fly();
-		bat.desiplayEnergy2();
+		bat.desiplayEnergy();
 
 	}
 

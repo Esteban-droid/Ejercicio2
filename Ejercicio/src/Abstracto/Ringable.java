@@ -2,8 +2,8 @@ package Abstracto;
 
 public interface Ringable {
 	
-	void ring();
+	String ring();
 	
-	void unlock();
+	String unlock();
 
 }

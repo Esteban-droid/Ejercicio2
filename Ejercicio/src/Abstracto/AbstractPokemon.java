@@ -7,7 +7,10 @@ public abstract class AbstractPokemon implements PokemonInterface{
 	}
 
 	public String pokemonInfo(Pokemon pokemon) {
-		return null;
+		String nombre = pokemon.getName();
+		int vida = pokemon.getHealth();
+		String tipo = pokemon.getType();
+		return "Pokemon: " + nombre + "Vida: " + vida + "De tipo: " + tipo;
 	}
 
 }

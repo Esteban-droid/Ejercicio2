@@ -6,20 +6,22 @@ public class BankAccountTest {
 
 		BankAccount cuenta = new BankAccount();
 		
-		BankAccount.depositar('C',1500);
+		cuenta.depositar('C',1500);
 		System.out.println("Saldo de cuenta corriente:" + cuenta.getsCorriente());
 		
-		BankAccount.depositar('A',8543);
+		cuenta.depositar('A',8543);
 		System.out.println("Saldo cuenta de ahorro:" +cuenta.getsAhorro());
 		
-		BankAccount.depositar('A',1000);
+		cuenta.depositar('A',1000);
 		System.out.println("Saldo cuenta de ahorro:" +cuenta.getsAhorro());
 		
-		BankAccount.retirar('C', 100);
+		cuenta.retirar('C', 1600);
 		System.out.println("Saldo de cuenta corriente:" + cuenta.getsCorriente());
+		
+		BankAccount cuenta2 = new BankAccount();
 		
 		System.out.println("----------------------------------------------------");
-		System.out.println(BankAccount.verTotal());
+		System.out.println(cuenta.verTotal());
 		System.out.println("----------------------------------------------------");
 		
 	}
