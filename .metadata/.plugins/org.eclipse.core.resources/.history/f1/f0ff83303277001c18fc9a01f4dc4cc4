@@ -68,7 +68,7 @@ public class Home extends HttpServlet {
 		
 		if (ciudad != null) {
 			salida.println("Mi Ciudad: " + request.getParameter("city")); 
-	        } else {	        	salida.println("Mi Ciudad: " + unknown);
+	        } else {	        	salida.println("Lenguaje favorito: " + unknown);
 	        }
 		
 		salida.println("</body></html>");
