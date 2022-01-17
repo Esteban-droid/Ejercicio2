@@ -1,0 +1,14 @@
+
+public class FizzBuzzTest {
+
+	public static void main(String[] args) {
+		
+		FizzBuzz iD = new FizzBuzz();
+
+        String resultado = iD.fizzBuzz(5); //Aquí se ingresa el número
+
+        System.out.println(resultado);
+
+	}
+
+}

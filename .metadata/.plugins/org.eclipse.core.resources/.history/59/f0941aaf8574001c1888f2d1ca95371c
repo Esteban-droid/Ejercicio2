@@ -1,0 +1,12 @@
+package Abstracto;
+
+public interface Ringable {
+	
+	default String ring() {
+		return "Retorna String";
+	}
+	
+	default String unlock() {
+		return "Retorna String";
+	}
+}

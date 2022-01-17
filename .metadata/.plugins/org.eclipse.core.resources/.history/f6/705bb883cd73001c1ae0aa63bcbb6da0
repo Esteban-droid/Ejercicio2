@@ -1,0 +1,8 @@
+package ObjectMaster2;
+
+import ObjectMaster1.Human;
+
+public class Samurai extends Human{
+
+	public int health = 200;
+}

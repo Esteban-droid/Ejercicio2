@@ -1,0 +1,43 @@
+class Person {
+
+    //private int age;
+
+    //private String name;
+
+    //public Person(int ageParam, String nameParam) {
+
+        //this.age = ageParam;
+
+        //this.name = nameParam;
+        
+    //-------this...Lo mismo que esto--------------
+        
+        //private int age;
+
+        //private String name;
+
+        //public Person(int ageParam, String nameParam) {
+
+        //    age = ageParam;
+
+        //    name = nameParam;
+
+        //}   
+	
+	//----------Se debe utilizar this si o si cuando los parametros se llaman igual que la varibale
+	
+	private int age;
+
+    private String name;
+
+    public Person(int age, String name) {
+
+        this.age = age;
+
+        this.name = name;
+
+
+    }
+
+}
+    

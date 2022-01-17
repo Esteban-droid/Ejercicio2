@@ -1,0 +1,15 @@
+package Static;
+
+public class Pokemon {
+	
+	String name;
+	int health;
+	String type;
+
+	public void attackPokemon(Pokemon pokemon) {
+		int ataque = 10;
+		System.out.println("El pokemon a atacado!");
+		pokemon.health = pokemon.health-ataque;
+		System.out.println("La vida del pokemon atacado se reduce en " + ataque + ". " + "Vida actual del pokemon: " + pokemon.health);
+	}
+}

@@ -1,0 +1,20 @@
+package Zoologico1;
+
+public class Gorila {
+
+	public void throwSomething() {
+		
+
+	}
+	
+	public void eatBananas() {
+		
+
+	}
+	
+	public void climb() {
+		
+
+	}
+
+}

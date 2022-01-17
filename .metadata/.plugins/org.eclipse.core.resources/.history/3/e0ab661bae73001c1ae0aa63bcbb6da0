@@ -1,0 +1,11 @@
+package ObjectMaster1;
+
+public class Human {
+
+	public int strength = 3;
+	public int stealth = 3;
+	public int intelligence = 3;
+
+}
+
+strength, stealth y intelligence 

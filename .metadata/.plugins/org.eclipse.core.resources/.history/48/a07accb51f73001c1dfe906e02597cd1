@@ -1,0 +1,35 @@
+
+public class Project {
+
+	private String nombre;
+
+    private String descripcion;
+    
+    public String elevatorPitch(String nombre, String descripcion){
+
+    	return nombre + ":" + descripcion;
+    	
+    }
+    
+    public String Project() {
+    	
+    	return nombre;
+    }
+    
+    
+    public Project(String name) {
+
+    
+    }
+
+
+    public Project(String nombre, String descripcion) {
+
+   		this.nombre = nombre;
+   		this.descripcion = descripcion;
+
+    }
+    
+}
+
+

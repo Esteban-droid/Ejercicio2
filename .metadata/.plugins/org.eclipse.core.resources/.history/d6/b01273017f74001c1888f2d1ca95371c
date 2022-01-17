@@ -1,0 +1,13 @@
+package Abstracto;
+
+public abstract class PokeAbstract implements PokemonInterface{
+	
+	public Pokemon createPokemon() {
+		return createPokemon("Pikachu",75,"Electrico");
+	}
+
+	public String pokemonInfo(Pokemon pokemon) {
+		return null;
+	}
+
+}

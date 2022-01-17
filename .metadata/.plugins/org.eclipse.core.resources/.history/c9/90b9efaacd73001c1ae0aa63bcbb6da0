@@ -1,0 +1,14 @@
+package ObjectMaster2;
+
+import ObjectMaster1.Human;
+
+public class Samurai extends Human{
+
+	public int health = 200;
+	
+public void deathBlow(Human humano) {
+		
+		System.out.println("El usó su definitiva!!!");
+		
+	}
+}

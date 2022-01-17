@@ -1,0 +1,19 @@
+package ObjectMaster2;
+
+import ObjectMaster1.Human;
+
+public class Ninja extends Human{
+
+	public int stealth  = 10;
+	
+public void steal(Human humano) {
+		
+		System.out.println("El ninja robó puntos del humano!");
+		humano.health = humano.health-stealth;
+		System.out.println("Vida del humano afectado por sigilo: " + humano.health);
+		System.out.println("Vida del ninja que robó: " + );
+		System.out.println("------------------------------------------");
+	
+	}
+
+}

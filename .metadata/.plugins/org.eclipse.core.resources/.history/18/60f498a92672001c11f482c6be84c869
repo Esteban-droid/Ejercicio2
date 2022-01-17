@@ -1,0 +1,13 @@
+public class StringDemo {
+
+     public static void main(String[] args) {
+
+        String ninja = "NTT Data es Increíble!";
+
+        int length = ninja.length();
+
+        System.out.println( "La longitud de la cadena es : " + length );
+
+     }
+
+}

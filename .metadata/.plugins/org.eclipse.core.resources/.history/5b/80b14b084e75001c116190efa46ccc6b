@@ -1,0 +1,17 @@
+package Calculadora;
+
+import java.io.Serializable;
+
+public class Calculadora implements Serializable{
+	
+	private double operandOne;
+	private double operandTwo;
+	private double result;
+	private String operation;
+
+	
+	public Calculadora() {
+		
+	}
+
+}

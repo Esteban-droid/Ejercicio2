@@ -1,0 +1,32 @@
+package Abstracto;
+
+public class Galaxy extends Phone implements Ringable {
+
+    public Galaxy(String versionNumber, int batteryPercentage, String carrier, String ringTone) {
+        super(versionNumber, batteryPercentage, carrier, ringTone);
+
+    }
+
+    @Override
+
+    public String ring() {
+    	return "Retorna ring";
+    }
+
+    @Override
+
+    public String unlock() {
+    	return "Retorna unlock";
+        // tu código aquí
+
+    }
+
+    @Override
+
+    public void displayInfo() {
+
+        // tu código aquí
+
+    }
+
+}

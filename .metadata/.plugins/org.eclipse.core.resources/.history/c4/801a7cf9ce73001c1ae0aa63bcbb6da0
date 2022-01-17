@@ -1,0 +1,29 @@
+package ObjectMaster2;
+
+import ObjectMaster1.Human;
+
+public class Samurai extends Human{
+
+	public int health = 200;
+	
+public void deathBlow(Human humano) {
+		
+		System.out.println("El samurai usó su definitiva!!!");
+		humano.health = 0;
+		System.out.println("La vida del humano esta en: " + humano.health);
+		health = health/2;
+		System.out.println("La vida del samurai se redujo a la mitad: " + health);
+	}
+
+public void meditate() {
+	
+		System.out.println("Samurai meditando...");
+		health = 200;
+		
+
+	}
+
+
+
+
+}

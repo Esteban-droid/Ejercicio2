@@ -1,0 +1,48 @@
+class Person {
+
+    //private int age;
+
+    //private String name;
+
+    //public Person(int ageParam, String nameParam) {
+
+        //this.age = ageParam;
+
+        //this.name = nameParam;
+        
+    //-------this...Lo mismo que esto--------------
+        
+        //private int age;
+
+        //private String name;
+
+        //public Person(int ageParam, String nameParam) {
+
+        //    age = ageParam;
+
+        //    name = nameParam;
+
+        //}   
+	
+	//----------Se debe utilizar this si o si cuando los parametros se llaman igual que la varibale
+	
+	private int age;
+
+    private String name;
+
+    public Person(int age, String name) {
+
+        this.age = age;
+
+        this.name = name;
+
+       
+
+        //this no establecerá el valor del parámetro 'age', esta es una variable local en el método constructor y su         valor es el primer argumento. Por lo tanto this establecerá el valor del atributo 'age' de la clase.
+
+        age = age 
+
+    }
+
+}
+    

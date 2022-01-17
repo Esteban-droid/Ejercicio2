@@ -1,0 +1,72 @@
+package com.simpleproject.web;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+/**
+ * Servlet implementation class Home
+ */
+@WebServlet("/Home")
+
+public class Home extends HttpServlet {
+	
+	private static final long serialVersionUID = 1L;
+       
+    public Home() {
+    	
+        super();
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		PrintWriter salida=response.getWriter();
+		
+		salida.println("<html><body>");
+		
+		salida.println("Mi nombre: " + request.getParameter("name")); 
+		
+		salida.println("<br><br>");
+		
+		salida.println("Mi apellido: " + request.getParameter("lastname")); 
+		
+		salida.println("<br><br>");
+		
+		salida.println("Lenguaje favorito: " + request.getParameter("languaje"));
+		
+		salida.println("<br><br>");
+		
+		salida.println("Mi Ciudad: " + request.getParameter("city")); 
+		
+		salida.println("<br><br>");
+		
+		salida.println("</body></html>");
+		
+		//http://localhost:8080/SimpleProject/Home?nombre=Esteban&apellido=Mora...asi se pone mas parametros
+	
+		String ciudad = request.getParameter("");
+		
+		String texto = "unknow";
+		if (ciudad == null ) {
+			request.setAttribute("unknown", ciudad);
+		}
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		doGet(request, response);
+		
+	}
+
+}

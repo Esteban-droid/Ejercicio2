@@ -1,0 +1,15 @@
+package ListAssigment;
+
+public class Node {
+
+    public int value;
+
+    public Node next=null;
+
+    public Node(int value) {
+
+        // su codigo aqui
+
+    }
+
+}

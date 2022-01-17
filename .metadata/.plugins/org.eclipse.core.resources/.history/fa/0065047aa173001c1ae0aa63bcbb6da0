@@ -1,0 +1,10 @@
+package HerenciaPaquetes;
+
+public class Human extends Mammal{ //Ahora lo que tiene Mammal lo tiene Human, excepto los atributos si es que estan con getters y setters
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

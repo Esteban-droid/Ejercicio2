@@ -1,0 +1,31 @@
+package Calculadora;
+
+public class CalculadoraTest {
+
+	public static void main(String[] args) {
+		/*
+		Operaciones operaciones = new Operaciones();
+		Calculadora suma = operaciones.suma(10.5, 5.2);
+		Calculadora resta = operaciones.resta(10.5, 5.2);
+		System.out.println(suma.getResult());
+		System.out.println(resta.getResult());
+		
+		System.out.println("----------------------------------------------");
+		
+		Calculadora suma2 = operaciones.suma(10.5, 5.2);
+		Calculadora multiplicacion = operaciones.multiplicacion(suma2.getResult(), 10.0);
+		System.out.println(multiplicacion.getResult());
+		
+		System.out.println("----------------------------------------------");
+		
+		Calculadora operacion = operaciones.operacion_compleja(10.5, 5.2, 10);
+		System.out.println(operacion.getResult());
+		
+		*/
+		
+		
+		
+
+	}
+
+}

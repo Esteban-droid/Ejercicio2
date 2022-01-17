@@ -1,0 +1,9 @@
+package ObjectMaster2;
+
+import ObjectMaster1.Human;
+
+public class Ninja extends Human{
+
+	public int stealth  = 10;
+
+}

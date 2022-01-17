@@ -1,0 +1,7 @@
+package Abstracto;
+
+public class Pokedex extends AbstractPokemon {
+
+    // su código aquí
+
+}

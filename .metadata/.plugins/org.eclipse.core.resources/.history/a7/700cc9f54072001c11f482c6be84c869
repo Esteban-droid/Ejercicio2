@@ -1,0 +1,24 @@
+
+public class StringManipulator {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+	public String trimAndConcat(String string, String string2) {
+		return string.trim()+string2.trim();
+	}
+
+	public int getIndexOrNull(String string, char letter) {
+		return string.indexOf(letter);
+	}
+	
+	public int getIndexOrNull(String string, String string2) {
+		return string.indexOf(string2);
+	}
+
+	public String concatSubstring(String, int, int, String) {
+		return substring(String, int, int, String);
+	}
+}

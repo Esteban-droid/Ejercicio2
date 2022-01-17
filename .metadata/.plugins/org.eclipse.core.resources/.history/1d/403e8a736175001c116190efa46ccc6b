@@ -1,0 +1,115 @@
+package Calculadora;
+
+import java.io.Serializable;
+
+public class Calculadora implements Serializable{
+	/*
+	private double operandOne;
+	private double operandTwo;
+	private double result;
+	private String operation;
+
+	
+	public Calculadora() {
+		
+	}
+
+
+	public double getOperandOne() {
+		return operandOne;
+	}
+
+
+	public void setOperandOne(double operandOne) {
+		this.operandOne = operandOne;
+	}
+
+
+	public double getOperandTwo() {
+		return operandTwo;
+	}
+
+
+	public void setOperandTwo(double operandTwo) {
+		this.operandTwo = operandTwo;
+	}
+
+
+	public double getResult() {
+		return result;
+	}
+
+
+	public void setResult(double result) {
+		this.result = result;
+	}
+
+
+	public String getOperation() {
+		return operation;
+	}
+
+
+	public void setOperation(String operation) {
+		this.operation = operation;
+	}
+*/
+	private int Num1;
+	private int Num2;
+	private int Num3;
+	private int Num4;
+	private int Num5;
+	private double result;
+	
+	public Calculadora() {
+		
+	}
+
+	public int getNum1() {
+		return Num1;
+	}
+
+	public void setNum1(double d) {
+		Num1 = d;
+	}
+
+	public int getNum2() {
+		return Num2;
+	}
+
+	public void setNum2(double e) {
+		Num2 = e;
+	}
+
+	public int getNum3() {
+		return Num3;
+	}
+
+	public void setNum3(int num3) {
+		Num3 = num3;
+	}
+
+	public int getNum4() {
+		return Num4;
+	}
+
+	public void setNum4(int num4) {
+		Num4 = num4;
+	}
+
+	public int getResult() {
+		return result;
+	}
+
+	public void setResult(double d) {
+		this.result = d;
+	}
+
+	public int getNum5() {
+		return Num5;
+	}
+
+	public void setNum5(int num5) {
+		Num5 = num5;
+	}
+}

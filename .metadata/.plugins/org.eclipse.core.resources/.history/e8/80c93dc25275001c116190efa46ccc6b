@@ -1,0 +1,14 @@
+package Calculadora;
+
+public class Operaciones {
+
+	protected Calculadora suma() {
+		
+		Calculadora calculadora = new Calculadora(double num1, double num2);
+		
+		calculadora.setOperandOne(10.5);
+		calculadora.setOperandTwo(5.2);
+		return calculadora;
+	}
+
+}

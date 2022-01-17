@@ -1,0 +1,60 @@
+
+public class Arreglos {
+
+	public static void main(String[] args) {
+
+		int[] myArray; //Declaración
+
+		myArray = new int[5]; // Inicialización
+
+		myArray[0] = 4; // agregar valor
+
+		myArray[1] = 8; // agregar valor
+
+		myArray[2] = 8; // agregar valor
+
+		myArray[3] = 5; // agregar valor
+
+		myArray[4] = 9; // agregar valor
+		
+		//---------------------------------------------------
+		
+		//Todo de una vez:
+
+		int[] myArray2 = {4, 8, 8, 5, 9};
+		
+		//---------------------------------------------------
+		
+		//import java.util.ArrayList;
+
+		//ArrayList<Integer> myArray = new ArrayList<Integer>();
+		
+		//---------------------------------------------------
+		
+		//Bucle while
+		
+		int i = 0;
+
+		while(i < 7)
+
+		{
+
+		    System.out.println("foo");
+
+		    i++;
+
+		}
+		
+		//---------------------------------------------------
+		
+		//Bucle for
+		
+		for (int i = 0; i < 7; i++){
+
+		    System.out.println("bar");
+
+		}
+		
+	}
+
+}

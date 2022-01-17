@@ -1,0 +1,49 @@
+
+public class StringManipulatorTest {
+
+	public static void main(String[] args) {
+		
+		StringManipulator manipulator = new StringManipulator();
+		
+		//-------------------------------------------------------------------------
+
+		String str = manipulator.trimAndConcat("    Hola     ","     Mundo    ");
+
+		System.out.println(str); // HolaMundo
+		
+		//-------------------------------------------------------------------------
+		
+		char letter = 'n';
+
+		int a = manipulator.getIndexOrNull("NTT Data", letter);
+
+		int b = manipulator.getIndexOrNull("Hola Mundo", letter);
+
+		int c = manipulator.getIndexOrNull("Saludar", letter);
+
+		System.out.println(a); // -1
+
+		System.out.println(b); // 7
+
+		System.out.println(c); // -1
+		
+		//-------------------------------------------------------------------------
+		
+		String word = "Hola";
+
+		String subString = "la";
+
+		String notSubString = "mundo";
+
+		int aa = manipulator.getIndexOrNull(word, subString);
+
+		int bb = manipulator.getIndexOrNull(word, notSubString);
+
+		System.out.println(aa); // 2
+
+		System.out.println(bb); // -1
+
+	}
+	
+	
+}

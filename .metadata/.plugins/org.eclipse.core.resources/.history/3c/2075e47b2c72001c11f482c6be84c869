@@ -1,0 +1,23 @@
+public class FizzBuzz {
+
+    public String fizzBuzz(int number) {
+        // lógica de fizzbuzz aquí
+		
+
+		if(number%3==1) {
+
+		    System.out.println("Fizz");
+
+		} else if(number%5==1) {
+
+		    System.out.println("Buzz");
+
+		} else {
+
+		    System.out.println(number);
+
+		}
+
+    }
+
+}

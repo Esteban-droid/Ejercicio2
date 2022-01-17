@@ -1,0 +1,13 @@
+
+public class ProjectTest {
+
+	public static void main(String[] args) {
+
+		Project proyecto = new Project("Gato");
+		String name = proyecto.Project();
+		String info = proyecto.elevatorPitch(name, "Es el proyecto 1");
+		System.out.println(info);
+
+	}
+
+}

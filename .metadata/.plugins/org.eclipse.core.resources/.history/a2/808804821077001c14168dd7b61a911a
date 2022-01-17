@@ -1,0 +1,13 @@
+package Zoologico1;
+
+public class Mammal {
+
+	public int energyLevel = 100;
+
+	public void desiplayEnergy() {
+		
+		System.out.println("Nivel de energía: " + energyLevel);
+		System.out.println("------------------------------------------");
+	}
+	
+}

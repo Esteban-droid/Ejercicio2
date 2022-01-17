@@ -1,0 +1,21 @@
+package Abstracto;
+
+public class PhoneTester {
+
+	public static void main(String[] args) {
+		
+		IPhone iphone = new IPhone("N48493S",90,"Disponible","default");
+		iphone.displayInfo();
+		iphone.ring();
+		iphone.unlock();
+		
+		System.out.println("--------------------------------------");
+
+		Galaxy galaxy = new Galaxy("S20 2021", 10, "Disponible", "default");
+		galaxy.displayInfo();
+		galaxy.ring();
+		galaxy.unlock();
+
+	}
+
+}

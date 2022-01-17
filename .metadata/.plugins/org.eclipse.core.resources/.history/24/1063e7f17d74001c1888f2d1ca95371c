@@ -1,0 +1,7 @@
+package Abstracto;
+
+public interface PokemonInterface {
+	
+	
+
+}

@@ -1,0 +1,17 @@
+package Static;
+
+public class BankAccountTest {
+
+	public static void main(String[] args) {
+
+		BankAccount cuenta = new BankAccount();
+		
+		cuenta.setsCorriente(200.0);
+		cuenta.setsCorriente(200.0);
+		cuenta.setsAhorro(200.0);
+		
+		System.out.println(BankAccount.verTotal());
+		//System.out.println(BankAccount.depositar());
+	}
+
+}

@@ -1,0 +1,12 @@
+
+public class ProjectTest {
+
+	public static void main(String[] args) {
+
+		Project proyecto = new Project();
+		String nameP = proyecto.elevatorPitch("proyecto 1", "Es el proyecto 1");
+		
+
+	}
+
+}

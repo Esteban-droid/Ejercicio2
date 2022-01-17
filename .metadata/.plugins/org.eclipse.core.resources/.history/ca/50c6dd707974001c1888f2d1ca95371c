@@ -1,0 +1,10 @@
+package Abstracto;
+
+public class InterfaceDemo {
+
+	void methodOne() {
+	}
+
+    void methodTwo();
+    
+}

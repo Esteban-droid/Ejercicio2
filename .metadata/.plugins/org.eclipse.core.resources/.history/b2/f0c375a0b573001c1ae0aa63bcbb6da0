@@ -1,0 +1,23 @@
+package ObjectMaster2;
+
+import ObjectMaster1.Human;
+
+public class Wizard extends Human{
+
+	public int vida = 50;
+	public int intelligence = 8;
+	
+	public void heal(Human human) {
+		
+		System.out.println("Humano sanado");
+		vida = vida + intelligence;
+	
+	}
+	
+	public void desiplayEnergy() {
+		
+		System.out.println("Nivel de vida: " + health);
+		System.out.println("------------------------------------------");
+	}
+
+}

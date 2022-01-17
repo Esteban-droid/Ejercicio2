@@ -1,0 +1,11 @@
+package Abstracto;
+
+public class PokemonTester {
+
+	public static void main(String[] args) {
+		
+		Pokemon pokemon = new Pokemon("", 0, "");
+
+	}
+
+}

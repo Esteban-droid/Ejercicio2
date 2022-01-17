@@ -1,0 +1,18 @@
+package Calculadora;
+
+public class CalculadoraTest {
+
+	public static void main(String[] args) {
+		
+		Calculadora calculadora = new Calculadora();
+		
+		
+		calculadora.setOperandOne(10.5);
+		calculadora.getOperandOne();
+		calculadora.setOperandTwo(5.2);
+		
+		calculadora.performOperation("+");
+		calculadora.getResult();
+	}
+
+}

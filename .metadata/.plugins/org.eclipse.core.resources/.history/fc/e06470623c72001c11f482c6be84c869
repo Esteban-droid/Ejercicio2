@@ -1,0 +1,20 @@
+
+public class StringManipulator {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+	public String trimAndConcat(String string, String string2) {
+		// TODO Auto-generated method stub
+		return string.trim()+string2.trim();
+	}
+
+	public int getIndexOrNull(String string, char letter) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	
+
+}

@@ -1,0 +1,26 @@
+package Abstracto;
+
+public class IPhone extends Phone implements Ringable {
+
+    public IPhone(String versionNumber, int batteryPercentage, String carrier, String ringTone) {
+        super(versionNumber, batteryPercentage, carrier, ringTone);
+    }
+
+    public void ring() {
+		System.out.println("anillo");
+    }
+
+    public void unlock() {
+    	return "desbloqueado";
+    }
+
+    public void displayInfo() {
+
+		System.out.println("Versión de IPHONE: " + getVersionNumber());
+		System.out.println("La batería tiene: " + getBatteryPercentage() + "% de energía");
+		System.out.println("Cargador: " + getCarrier());
+		System.out.println("Tono: " + getRingTone());
+
+    }
+
+}

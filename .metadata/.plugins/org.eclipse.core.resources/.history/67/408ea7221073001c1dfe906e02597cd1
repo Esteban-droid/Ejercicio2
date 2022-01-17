@@ -1,0 +1,27 @@
+import java.util.ArrayList;
+
+public class Excepciones {
+
+	public static void main(String[] args) {
+		
+		ArrayList<Object> Lista = new ArrayList<Object>();
+
+		Lista.add("13");
+
+		Lista.add("Hola Mundo");
+
+		Lista.add(48);
+
+		Lista.add("Adios Mundo");
+		
+		for(int i = 0; i < Lista.size(); i++) {
+
+		    int castedValue = (int) Lista.get(i);
+
+		}
+		
+		System.out.println(Lista);
+
+	}
+
+}

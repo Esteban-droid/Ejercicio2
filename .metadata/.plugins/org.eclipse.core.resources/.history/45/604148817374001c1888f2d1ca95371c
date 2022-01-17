@@ -1,0 +1,113 @@
+package Static;
+
+import java.util.Random;
+
+public class BankAccount {
+
+	private String nCuenta;
+	private static double sCorriente=0;
+	private static double sAhorro=0;
+	
+	private static int numberOfAccounts = 0;
+	private static double numberOfMoney = 0;
+	
+	public BankAccount() { //Constructor
+
+        nCuenta = randomNumber();
+        sCorriente = 0;
+        sAhorro=0;
+        numberOfAccounts++;
+
+    }
+	
+    private String randomNumber() {
+    	Random dato = new Random();
+    	//String number="";
+    	//for(int i = 1; i<=10; i++) {
+    	//	int numero = dato.nextInt(10);
+    	//	number=number+numero;
+    	//}
+    	//return number;
+    	
+    	Integer number = dato.nextInt(1000000000)+1000000000;
+    	return number.toString();
+    	
+    }
+    
+   /* public static double depositar(double saldo_corriente) {
+
+    	double corriente = getsCorriente()+sCorriente;
+    	return corriente;
+
+
+    }*/
+    
+    public static void depositar(char tipoCta, double numberOfMoney) {
+    	if (tipoCta == 'C' || tipoCta =='c') {
+    		sCorriente = sCorriente + numberOfMoney;
+    	} else if(tipoCta == 'A' || tipoCta =='a') {
+    		sAhorro = sAhorro + numberOfMoney;
+    	}
+    }
+    
+    public static void retirar(char tipoCta, double numberOfMoney) {
+    	if (tipoCta == 'C' || tipoCta =='c') {
+    		sCorriente = sCorriente - numberOfMoney;
+    	}else if(tipoCta == 'A' || tipoCta =='a') {
+    		sAhorro = sAhorro - numberOfMoney;
+    	}
+    }
+    
+    public static String verTotal() {
+    	double corriente = getsCorriente();
+    	double ahorro = getsAhorro();
+        return "Total en corriente: " + corriente + "." + " Total en ahorro: " + ahorro + ".";
+        
+
+     }
+
+    
+    //getters y setters
+
+		public String getnCuenta() {
+			return nCuenta;
+		}
+
+		public void setnCuenta(String nCuenta) {
+			this.nCuenta = nCuenta;
+		}
+
+		public static double getsCorriente() { //getter saldo cuenta corriente
+			return sCorriente;
+		}
+
+		public void setsCorriente(double sCorriente) {
+			this.sCorriente = sCorriente;
+		}
+
+		public static double getsAhorro() { //getter saldo cuenta ahorro
+			return sAhorro;
+		}
+
+		public void setsAhorro(double sAhorro) {
+			this.sAhorro = sAhorro;
+		}
+
+		public int getNumberOfAccounts() {
+			return numberOfAccounts;
+		}
+
+		public void setNumberOfAccounts(int numberOfAccounts) {
+			BankAccount.numberOfAccounts = numberOfAccounts;
+		}
+
+		public double getNumberOfMoney() {
+			return numberOfMoney;
+		}
+
+		public void setNumberOfMoney(int numberOfMoney) {
+			BankAccount.numberOfMoney = numberOfMoney;
+
+		}
+}
+    

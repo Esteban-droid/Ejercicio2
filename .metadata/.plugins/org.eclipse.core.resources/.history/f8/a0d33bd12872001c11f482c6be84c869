@@ -1,0 +1,53 @@
+public class StringDemo {
+
+     public static void main(String[] args) {
+
+        String ninja = "NTT Data es Increíble!";
+
+        int length = ninja.length();
+
+        System.out.println( "La longitud de la cadena es : " + length );
+        
+        //-----------------------------------------------------------------
+        
+        String cadena1 = "Mi nombre es ";
+
+        String cadena2 = "Michael";
+
+        String cadena3 = cadena1.concat(cadena2);
+
+        System.out.println(cadena3);
+
+        // Imprimirá mi nombre es Michael
+        
+        //-----------------------------------------------------------------
+        
+        System.out.println("Bienvenido," + " ninja" + "!");  // imprime "Bienvenido, ninja!"
+        
+        //-----------------------------------------------------------------
+        
+        String ninjaa = String.format("Hola %s, me debes $%.2f !", "Jack", 25.0);
+
+        System.out.println(ninjaa);
+
+        //Imprimirá Hola Jack, me debes $25.00 !
+
+        //En el lugar de %s se espera una cadena.
+
+        //En el lugar de %.2f se esperá un dato de tipo float. El número 2 indica que se colocarán dos números a la derecha del punto decimal.
+        
+      //-----------------------------------------------------------------
+        
+        String ninjaaa = "Bienvenido a NTT Data!";
+
+        int a = ninjaaa.indexOf("NTT"); // a es 13
+
+        int b = ninjaaa.indexOf("do"); // b es 8
+
+        int c = ninjaaa.indexOf("pizza"); // c es -1, "pizza" no ha sido encontrado.
+        
+      //-----------------------------------------------------------------
+
+     }
+
+}

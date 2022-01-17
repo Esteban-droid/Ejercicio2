@@ -1,0 +1,8 @@
+INDEX VERSION 1.4+C:\Users\emorabor\Desktop\sts-4.13.0.RELEASE\Ejercicios\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+4022966933.index
+316559467.index
+2009086532.index
+2359555539.index
+3134215729.index
+2380175872.index
+3861091645.index

@@ -1,0 +1,35 @@
+package Abstracto;
+
+public class IPhone extends Phone implements Ringable {
+
+    public IPhone(String versionNumber, int batteryPercentage, String carrier, String ringTone) {
+        super(versionNumber, batteryPercentage, carrier, ringTone);
+    }
+
+    @Override
+
+    public void ring() {
+		System.out.println(ring);
+
+        // tu código aquí
+
+    }
+
+    @Override
+
+    public String unlock() {
+		return "Retorna unlock";
+
+        // tu código aquí
+
+    }
+
+    @Override
+
+    public void displayInfo() {
+
+        // tu código aquí
+
+    }
+
+}

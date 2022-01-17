@@ -1,0 +1,29 @@
+package Zoologico2;
+
+public class Bat {
+	
+	public int energyLevel = 300;
+
+	public int fly() {
+		
+		System.out.println("Buff!! El murciélago a volado!!"); //-50 energia
+		energyLevel = energyLevel - 50;
+		return energyLevel;
+	}
+	
+	public int eatHumans() {
+		
+		System.out.println("Bueno, no importa"); //+25 energia
+		return energyLevel;
+
+	}
+
+	public int attackTown() {
+		
+		System.out.println("La ciudad está en llamas!!"); //-100 energia
+		return energyLevel;
+		
+	}
+
+
+}

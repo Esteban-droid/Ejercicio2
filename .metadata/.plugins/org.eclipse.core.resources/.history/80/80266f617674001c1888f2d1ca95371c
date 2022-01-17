@@ -1,0 +1,11 @@
+package Interfaces;
+
+public interface OperateBicycle {
+
+    void speedUp(int increment);
+
+    void applyBrakes(int decrement);
+    
+    //Hay tres tipos de métodos de Interfaz: default, static y abstract.
+
+}

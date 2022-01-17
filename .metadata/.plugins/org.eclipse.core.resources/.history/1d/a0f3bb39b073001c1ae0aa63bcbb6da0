@@ -1,0 +1,9 @@
+package ObjectMaster2;
+
+import ObjectMaster1.Human;
+
+public class Wizard extends Human{
+
+	public int health = 50;
+
+}

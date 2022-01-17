@@ -1,0 +1,10 @@
+package Calculadora;
+
+public class Operaciones {
+	Calculadora calculadora;
+	
+	protected void suma() {
+		calculadora = new Calculadora();
+	}
+
+}

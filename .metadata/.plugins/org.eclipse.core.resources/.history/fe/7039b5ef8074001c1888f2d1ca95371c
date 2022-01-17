@@ -1,0 +1,17 @@
+package Abstracto;
+
+public class PokemonTester {
+
+	public static void main(String[] args) {
+		
+		Pokemon charizard = new Pokemon("", 0, "");
+		Pokemon pikachu = new Pokemon("", 0, "");
+		
+		//........................................
+		
+		charizard.attackPokemon(pikachu);
+		
+
+	}
+
+}

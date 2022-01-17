@@ -1,0 +1,56 @@
+package ObjectMaster1;
+
+public class Human {
+
+	private int strength = 3;
+	private int stealth = 3;
+	private int intelligence = 3;
+	private int health = 100;
+	
+	public void attack(Human victima) {
+		System.out.println("El humano ha atacado");
+		victima.health = victima.health-strength;
+		System.out.println("Vida de la victima " + victima.health);
+		System.out.println("------------------------------------------");
+	
+	}
+	
+	public void desiplayEnergy() {
+		
+		System.out.println("Nivel de vida humano: " + health);
+		System.out.println("------------------------------------------");
+	}
+
+	public int getStrength() {
+		return strength;
+	}
+
+	public void setStrength(int strength) {
+		this.strength = strength;
+	}
+
+	public int getStealth() {
+		return stealth;
+	}
+
+	public void setStealth(int stealth) {
+		this.stealth = stealth;
+	}
+
+	public int getIntelligence() {
+		return intelligence;
+	}
+
+	public void setIntelligence(int intelligence) {
+		this.intelligence = intelligence;
+	}
+
+	public int getHealth() {
+		return health;
+	}
+
+	public void setHealth(int health) {
+		this.health = health;
+	}
+
+}

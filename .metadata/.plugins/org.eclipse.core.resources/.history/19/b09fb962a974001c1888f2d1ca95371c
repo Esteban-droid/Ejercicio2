@@ -1,0 +1,19 @@
+package Abstracto;
+
+public interface Ringable {
+	
+	//default String ring() {
+	//	return "Retorna String";
+	//}
+	
+	//default String unlock() {
+	//	return "Retorna String";
+	//}
+	
+	public void ring();
+	
+	public void unlock();
+	
+	//public final String ring = "anillo";
+	//public final String unlock = "Desbloqueado";
+}

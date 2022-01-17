@@ -1,0 +1,22 @@
+package Zoologico1;
+
+public class Gorila {
+
+	public void throwSomething() {
+		
+		System.out.println("El mono a tirado algo"); //-5 energia
+	
+	}
+	
+	public void eatBananas() {
+		
+		System.out.println("El mono comió una banana...ñumi!"); //+10 energia
+
+	}
+	
+	public void climb() {
+		
+		System.out.println("El mono trepó a la cima del árbol"); //-10 energia
+	}
+
+}

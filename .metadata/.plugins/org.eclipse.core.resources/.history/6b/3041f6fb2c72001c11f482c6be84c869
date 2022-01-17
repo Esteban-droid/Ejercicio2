@@ -1,0 +1,24 @@
+public class FizzBuzz {
+
+    public String fizzBuzz(int number) {
+        // lógica de fizzbuzz aquí
+		
+
+		if(number%3==0) {
+
+		    System.out.println("Fizz");
+
+		} else if(number%5==0) {
+
+		    System.out.println("Buzz");
+
+		} else {
+		    System.out.println("El numero es divisible por 3 y 5");
+
+		}
+		
+		return toString();
+    }
+
+
+}

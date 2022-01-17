@@ -1,0 +1,77 @@
+package Calculadora;
+
+public class Calculadora implements java.io.Serializable{
+	
+	private double operandOne;
+	private double operandTwo;
+	private double result;
+	private String operation;
+
+	
+	//public Calculadora() {
+	//	
+	//}
+
+	//getters y setters
+
+	public Calculadora(double operandOne, double operandTwo, double result, String operation) {
+		this.operandOne = operandOne;
+		this.operandTwo = operandTwo;
+		this.result = result;
+		this.operation = operation;
+	}
+
+	public double getOperandOne() {
+		return operandOne;
+	}
+
+	public void setOperandOne(double operandOne) {
+		this.operandOne = operandOne;
+	}
+
+
+	public double getOperandTwo() {
+		return operandTwo;
+	}
+
+
+	public void setOperandTwo(double operandTwo) {
+		this.operandTwo = operandTwo;
+	}
+
+
+	public double getResult() {
+		return result;
+	}
+
+
+	public void setResult(double result) {
+		this.result = result;
+	}
+
+
+	public String getOperation() {
+		return operation;
+	}
+
+
+	public void setOperation(String operation) {
+		this.operation = operation;
+	}
+	
+	//operaciones
+	
+	public void performOperation(String operacion) {
+		if(operacion.equals("+")) {
+			double suma = operandOne + operandTwo;
+			result = suma;
+			//System.out.println("La suma es: " + result);
+		}
+		
+		else if(operacion.equals("-")) {
+			double resta = operandOne - operandTwo;
+			result = resta;
+			//System.out.println("La resta es: " + this.result);
+		}
+	}
+}

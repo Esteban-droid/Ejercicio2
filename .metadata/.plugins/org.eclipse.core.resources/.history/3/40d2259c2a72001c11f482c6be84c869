@@ -1,0 +1,9 @@
+public class FizzBuzz {
+
+    public String fizzBuzz(int number) {
+
+        // lógica de fizzbuzz aquí
+
+    }
+
+}

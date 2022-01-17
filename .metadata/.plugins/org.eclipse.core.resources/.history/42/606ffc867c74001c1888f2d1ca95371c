@@ -1,0 +1,13 @@
+package Static;
+
+public class Pokemon {
+	
+	String name;
+	int health;
+	String type;
+
+	public void attackPokemon(Pokemon pokemon) {
+		int ataque = 10;
+		pokemon.health = pokemon.health-ataque;
+	}
+}

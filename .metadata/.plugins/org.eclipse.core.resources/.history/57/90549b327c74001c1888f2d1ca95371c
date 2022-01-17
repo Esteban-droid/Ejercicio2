@@ -1,0 +1,9 @@
+package Static;
+
+public class Pokemon {
+	
+	String name;
+	int health;
+	String type;
+
+}

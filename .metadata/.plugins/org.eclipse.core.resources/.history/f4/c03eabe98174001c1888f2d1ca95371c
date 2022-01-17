@@ -1,0 +1,11 @@
+package Abstracto;
+
+public class Pokedex extends AbstractPokemon {
+	
+	public int myPokemons = 0;
+
+	public void listPokemon() {
+		
+	}
+
+}
