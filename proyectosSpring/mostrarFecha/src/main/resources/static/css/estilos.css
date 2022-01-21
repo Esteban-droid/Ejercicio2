@@ -1,0 +1,11 @@
+@charset "ISO-8859-1";
+
+h2#date {
+	color: blue;
+}
+
+h2#time {
+	color: green;
+}
+
+
