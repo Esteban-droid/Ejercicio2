@@ -6,38 +6,50 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Edit</title>
+	<title>Editar</title>
 </head>
 <body>
 
-				<form action="/languages/<c:out value="${language.id}"/>" method="post">
-				<input type="hidden" name="_method" value="delete">
-				<input type="submit" class="btn btn-link" value="delete">
-				</form>
-				<a href="/languages">Home </a>
-				
-				<h2>Edit Language</h2>
+				<h2>Editar</h2>
 
+				<a href="/languages">Dashboard</a><br><br>
+ 
 				<form:form action="/languages/${language.id}" method="post" modelAttribute="language">
-		    	<input type="hidden" name="_method" value="put">
+				<input type="hidden" name="_method" value="put">
+					<p>
 
-				<form:label path="name">Name</form:label>
-				<p><form:errors path="name"/></p>
+        				<form:label path="name">Name</form:label>
+        				<form:errors path="name"/>
+        				<form:input path="name"/>
 
-				<form:input path="name"/>
+    				</p>
+    				
+    				<p>
 
-				<form:label path="creator">Creator</form:label>
-				<p><form:errors path="creator"/></p>
+        				<form:label path="creator">Creator</form:label>
+        				<form:errors path="creator"/>
+        				<form:input path="creator"/>
 
-				<form:input path="creator"/>
+    				</p>
+    				
+    				<p>
 
-				<form:label path="version">Version</form:label>
-				<p><form:errors path="version"/></p>
+        				<form:label path="version">Version</form:label>
+        				<form:errors path="version"/>
+        				<form:input path="version"/>
 
-				<form:input path="version"/>
+    				</p>
+    				
 
-				<input type="submit" value="Submit" class="btn btn-success"/>
+					<input type="submit" value="Submit"/>
 
-			</form:form>
+				</form:form>
+			
+			<br>
+			
+				<form action="/languages/<c:out value="${language.id}"/>" method="post">
+					<input type="hidden" name="_method" value="delete">
+    				<input type="submit" value="delete">
+				</form>
 </body>
 </html>

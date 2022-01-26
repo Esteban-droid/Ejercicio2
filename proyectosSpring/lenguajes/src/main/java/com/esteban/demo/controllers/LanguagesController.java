@@ -19,74 +19,79 @@ import com.esteban.demo.services.LanguageService;
 @Controller
 
 public class LanguagesController {
-	// <-- Attributes & Dependency injection -->
+
 	private final LanguageService langService;
 	
-	// <-- Constructors -->
 	public LanguagesController(LanguageService langService) {
 		this.langService = langService;
 	}
 	
-	// <-- Methods -->
-	// GET route for languages
+	//mostrar lenguajes
 	@RequestMapping(value="languages", method=RequestMethod.GET)
-	// Model used for instantiating and binding to our view model
 	public String index(Model model, @ModelAttribute("language")Language language) {
 		List<Language> languages = langService.allLanguages();
 		model.addAttribute("languages", languages);
 		return "/languages/index.jsp";
 	}
 	
-	// Post route for creation
+	//----------------------------------------------------------------------------
+
+	//crear nuevo lenguage
+	@RequestMapping("/languages")
+    public String newBook(@ModelAttribute("language") Language language) {
+        return "/languages/index.jsp";
+    }
+	
 	@RequestMapping(value="languages", method=RequestMethod.POST)
-	// @Valid checks for validation
-	// @BindingResult after, checks for errors
-	public String create(@Valid @ModelAttribute("language") Language language, BindingResult result, Model model) {
+	public String create(@Valid @ModelAttribute("language") Language language, BindingResult result) {
 		if(result.hasErrors()) {
-			List<Language> languages = langService.allLanguages();
-			model.addAttribute("languages", languages);
 			return "/languages/index.jsp";
 		}else {
 			langService.createLang(language);
 			return "redirect:/languages";
 		}
 	}
+
+	//-----------------------------------------------------------------------------
 	
-	// GET route for show id
+	//mostrar un libro especifico
 	@RequestMapping(value="languages/{id}", method=RequestMethod.GET)
-	// @Path for query and Model for binding view
 	public String show(@PathVariable("id") Long id, Model model) {
 		Language language = langService.findLang(id);
 		model.addAttribute("language", language);
 		return "/languages/show.jsp";
 	}
 	
-	// GET route for edit id
+	//------------------------------------------------------------------------------
+	
+	//editar un lenguaje
 	@RequestMapping(value="languages/{id}/edit", method=RequestMethod.GET)
 	public String edit(@PathVariable("id") Long id, Model model) {
 		Language language = langService.findLang(id);
 		model.addAttribute("language", language);
 		return "/languages/edit.jsp";
 	}
-
 	
-	// PUT route for update by id
+	//-------------------------------------------------------------------------------
+	
+	//actualizar el lenguaje
 	@RequestMapping(value="languages/{id}", method=RequestMethod.PUT)
-	public String update(@Valid @ModelAttribute("language") Language language,BindingResult result, @PathVariable("id") Long id,
-			@RequestParam(value="name") String name, @RequestParam(value="creator") String creator, @RequestParam(value="version") String version){
-		
+	public String update(@Valid @ModelAttribute("language") Language language,BindingResult result) {		
 		if (result.hasErrors()) {
 			return "languages/edit.jsp";
 		} else {
-			langService.updateLang(id, name, creator, version);
+			langService.updateLang(language);
 			return "redirect:/languages";
 		}
 	}
-	// DELETE Route by id
-		@RequestMapping(value="/languages/{id}", method=RequestMethod.DELETE)
-		public String destory(@PathVariable("id") Long id) {
-			// Queries and deletes language from PathVariable
-			langService.deleteLang(id);
-			return "redirect:/languages";
-		}
+	
+	//------------------------------------------------------------------------------
+
+	//eliminar lenguaje
+	@RequestMapping(value="/languages/{id}", method=RequestMethod.DELETE)
+	public String destory(@PathVariable("id") Long id) {
+		langService.deleteLang(id);
+		return "redirect:/languages";
+	}
+
 }

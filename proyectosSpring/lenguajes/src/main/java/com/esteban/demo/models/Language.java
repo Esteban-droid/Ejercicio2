@@ -9,10 +9,9 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 @Entity
 
-// Assign Entity to a table
 @Table(name="languages")
 public class Language {
-	// <-- Attributes -->
+
 	@Id 
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
@@ -28,7 +27,6 @@ public class Language {
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private Date updatedAt;
 	
-	// <-- Constructors -->
 	public Language() {
 		
 	}
@@ -39,7 +37,8 @@ public class Language {
 		this.version = version;
 	}
 
-	// <-- Getters & Setters -->
+	//getters y setters
+	
 	public Long getId() {
 		return id;
 	}
@@ -88,7 +87,6 @@ public class Language {
 		this.updatedAt = updatedAt;
 	}
 	
-	// <-- Methods -->
 	@PrePersist
 	protected void onCreate() {
 		this.createdAt = new Date();

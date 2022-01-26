@@ -10,19 +10,25 @@ import com.esteban.demo.repositories.LanguageRepository;
 
 @Service
 public class LanguageService {
-	// <-- Attributes & Dependency injection -->
+	
+	 //Agregando el lenguaje al repositorio como una dependencia
 	private final LanguageRepository langRepo;
 	
-	// <-- Constructors -->
 	public LanguageService(LanguageRepository langRepo) {
 		this.langRepo = langRepo;
 	}
 	
-	//<-- Methods -->
+	//Devolviendo todos los lenguajes.
 	public List<Language> allLanguages(){
 		return langRepo.findAll();
 	}
 	
+	//Creando un lenguaje.
+	public Language createLang(Language lang) {
+		return langRepo.save(lang);
+	}
+	
+	//Obteniendo la información de un lenguaje
 	public Language findLang(Long id) {
 		Optional<Language> optionalLang = langRepo.findById(id);
 		if(optionalLang.isPresent()) {
@@ -32,27 +38,31 @@ public class LanguageService {
 		}
 	}
 	
-	public Language createLang(Language lang) {
-		return langRepo.save(lang);
-	}
+	//-------------------------------------------------------------------------------
 	
+	//Actualizando un lenguaje
 	public Language updateLang(Long id, String name, String creator, String version) {
-		Optional<Language> optionalLang = langRepo.findById(id);
-		if(optionalLang.isPresent()) {
-			Language updateLang = optionalLang.get();
-			// Update fields
-			updateLang.setName(name);
-			updateLang.setCreator(creator);
-			updateLang.setVersion(version);
-			
-			return langRepo.save(updateLang);
+		Language language = findLang(id);
+		if(language != null) {
+			language.setName(name);
+			language.setCreator(creator);;
+			language.setVersion(version);
+			langRepo.save(language);
+			return language;
 		} else {
 			return null;
 		}
 	}
 	
+	//--------------------------------------------------------------------------------
+	
+	//Borrar lenguaje
 	public void deleteLang(Long id) {
 			langRepo.deleteById(id);
 		
+	}
+	
+	public void updateLang(Language lang) {
+		langRepo.save(lang);
 	}
 }

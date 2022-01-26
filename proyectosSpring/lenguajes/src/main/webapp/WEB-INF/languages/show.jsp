@@ -4,21 +4,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Language Info</title>
+	<title>Info</title>
 </head>
 <body>
-  				<a class="nav-link" href="/languages">Home </a>
-    			<br>Language Details
-
-    		<h5><c:out value="${language.name}"/></h5>
-    		<p>Creator: <c:out value="${language.creator}"/>
-    			<br>Version: <c:out value="${language.version}"/></p>
+  			<a href="/languages">Dashboard</a><br>
+  			
+    		<h1><c:out value="${language.name}"/></h1>
+    		
+    		<h1><c:out value="${language.creator}"/></h1>
+    		
+    		<h1><c:out value="${language.version}"/></h1>
     		
     		<a href="/languages/${language.id}/edit">Edit</a>
+    		
+    		<br><br>
 
     		<form action="/languages/<c:out value="${language.id}"/>" method="post">
-				<input type="hidden" name="_method" value="delete">
-    			<input type="submit" class="btn btn-link" value="delete">
+    			<input type="hidden" name="_method" value="delete">
+    			<input type="submit" value="delete">
     		</form>
 
 </body>
