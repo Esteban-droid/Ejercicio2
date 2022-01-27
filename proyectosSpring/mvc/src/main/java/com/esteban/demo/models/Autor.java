@@ -10,6 +10,7 @@ import javax.persistence.Id;
 import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 import org.springframework.format.annotation.DateTimeFormat;
@@ -24,16 +25,17 @@ public class Autor {
     @GeneratedValue(strategy = GenerationType.IDENTITY) //lo establece como autoincrementable
 
     private Long id;
+
+    @NotNull
     @Size(min = 2, max = 200) //Agrega la validación a la columna para que esté dentro del rango especificado
-
     private String nombre;
-
+    
+    @NotNull
     @Size(min = 5, max = 200)
-
     private String descripcion;
-
+    
+    @NotNull
     @Size(min = 2, max = 200)
-
     private String apellido;
 
     // Esto no permitirá que el campo createdAt sea modificado después de su creación.
