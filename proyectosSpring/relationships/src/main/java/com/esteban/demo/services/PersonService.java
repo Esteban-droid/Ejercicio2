@@ -8,31 +8,30 @@ import org.springframework.stereotype.Service;
 import com.esteban.demo.models.Person;
 import com.esteban.demo.repositories.PersonRepository;
 
-
-
 @Service
 public class PersonService {
 
 	private final PersonRepository personRepo;
 	
-	public PersonService(PersonRepository personRepo) {
-		this.personRepo = personRepo;			
+	public PersonService(PersonRepository personRepository) {
+		this.personRepo = personRepository;			
 	}
 	
-	//Devolviendo todas las personas
+	//Devolviendo todas las personas.
 	public List<Person> allPersons(){
 		return personRepo.findAll();
 	}
 	
-	//Creando persona 
+	//Creando persona
 	public Person createPerson(Person person) {
 		return personRepo.save(person);
 	}
-	
+
 	//Obteniendo la información de una persona
 	public Person findPerson(Long id) {
 		Optional<Person> optionalPerson = personRepo.findById(id);
 		if(optionalPerson.isPresent()) {
+			System.out.println(optionalPerson.get());
 			return optionalPerson.get();
 		}else {
 			return null;

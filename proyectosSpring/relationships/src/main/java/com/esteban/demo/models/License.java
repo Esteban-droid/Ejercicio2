@@ -12,6 +12,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 @Entity
 
 @Table(name="licenses")
@@ -26,6 +28,7 @@ public class License {
 
     private Long id;
     private String number;
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date expirationDate;
     private String state;
 
